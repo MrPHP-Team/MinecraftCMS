@@ -2,11 +2,11 @@
 	<form action="" method="POST"><input type="submit" name="logout" class="button" value="Logout"></form>
 	<br /><br />
 	<h4>SEO</h4>
-		<p>Заглавие сайта</p>
+		<p>Site title</p>
 			<strong><?=$title?></strong>
-		<p>Описание сайта</p>
+		<p>Site description</p>
 			<strong><?=$description?></strong>
 			<div id="desc">
-				<p>SEO конфигурация [root\application\config\site.php]</p>
+				<p>SEO configuration [root\application\config\site.php]</p>
 			</div>
 </div>

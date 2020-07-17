@@ -26,7 +26,7 @@ $config['controller_trigger']	= 'c';
 
 $config['function_trigger']		= 'm';
 
-$config['directory_trigger']	= 'd'; // экспериментальный в настоящее время не используется
+$config['directory_trigger']	= 'd'; // experimental not currently in use
 
 $config['log_threshold'] = 0;
 
@@ -67,5 +67,3 @@ $config['time_reference'] = 'local';
 $config['rewrite_short_tags'] = FALSE;
 
 $config['proxy_ips'] = '';
-
-?>

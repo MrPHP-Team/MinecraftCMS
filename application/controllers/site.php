@@ -8,29 +8,29 @@ class site extends CI_Controller {
 				$this->load->config('site');
 				$data['title'] = $this->config->item('title');
 				$data['site_description'] = $this->config->item('description');
-
+				
 				#Is the site down for maintence?
 				if($this->config->item('maintence_mode') == true){
-					show_error('Сайт закрыт для обслуживания');
+					show_error('The site is down for maintence');
 				}
-
+				
 				#If the page isn't assigned set it to start
                 if($page == null){$page = 'start';}
-
+				
 				#Fix
                 $page = htmlentities(mysql_real_escape_string($page));
-
+                
                 # - Initialize "page" model.
                 $this->load->model('pageDB');
-
+				
 				#Is the requested page closed?
 				if($this->pageDB->is_closed($page)){
 					show_404();
 				}
-
+				
 				#Does the page even exists?
 				$this->pageDB->page_exists($page);
-
+				
                 # - Load page data
                  $data['menuItems'] = $this->pageDB->getMenuItems();
                  $data['pageContent'] = $this->pageDB->getPageContent($page);
@@ -58,10 +58,8 @@ class site extends CI_Controller {
 			}
 		}
 		if($password == ''){
-				show_error('Пустой пароль не допускается. Вы забыли установить его?');
+				show_error('Empty password is not allowed. Did you forget to set it?');
 			}
 	    $this->load->view('login/login');
 	}
 }
-
-?>

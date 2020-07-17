@@ -11,5 +11,3 @@ $route['login'] = "site/login";
 $route['admin/login'] = "site/login";
 $route['(:any)'] = "site/index/$1";
 $route['404_override'] = '';
-
-?>

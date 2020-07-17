@@ -2,7 +2,7 @@
 <html LANG="EN">
 <head>
     <title><?=$title?></title>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
 	<link href="<?=base_url()?>css/style.css" rel="stylesheet">
 	<link rel="icon" type="image/png" href="favicon.png">
 	<META NAME="Description" CONTENT="<?=$site_description?>">

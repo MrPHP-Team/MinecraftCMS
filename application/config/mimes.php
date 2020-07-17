@@ -1,11 +1,10 @@
 <?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');
-
 /*
-| -------------------------------------------------- -----------------
+| -------------------------------------------------------------------
 | MIME TYPES
-| -------------------------------------------------- -----------------
-| Этот файл содержит массив типов MIME. Используется
-| что-бы Загрузить класс, чтобы помочь определить разрешенные типы файлов.
+| -------------------------------------------------------------------
+| This file contains an array of mime types.  It is used by the
+| Upload class to help identify allowed file types.
 |
 */
 
@@ -105,5 +104,3 @@ $mimes = array(	'hqx'	=>	'application/mac-binhex40',
 
 /* End of file mimes.php */
 /* Location: ./application/config/mimes.php */
-
-?>

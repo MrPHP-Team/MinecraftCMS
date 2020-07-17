@@ -1,11 +1,10 @@
 <?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 /*
-
-| -------------------------------------------------- -----------------
-| Иностранные персонажи
-| -------------------------------------------------- -----------------
-| Этот файл содержит массив иностранных символов для транслитерации
-| преобразование, используемое помощником Text
+| -------------------------------------------------------------------
+| Foreign Characters
+| -------------------------------------------------------------------
+| This file contains an array of foreign characters for transliteration
+| conversion used by the Text helper
 |
 */
 $foreign_characters = array(
@@ -63,5 +62,3 @@ $foreign_characters = array(
 
 /* End of file foreign_chars.php */
 /* Location: ./application/config/foreign_chars.php */
-
-?>

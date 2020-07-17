@@ -1,10 +1,10 @@
 <div id="NewWidgetBox">
-	<h3>Новый виджет</h3>
+	<h3>New widget</h3>
 	<form action="" method="POST">
 		<textarea name="content" cols="75" rows="5"></textarea>
-		<input name="title" type="text" placeholder="Заглавие">
-		<input type="submit" style="width: 100px; height: 24px;" value="Сохранить">
-		<input type="button" onclick="NoNewWidget(); return false;" style="width: 100px; height: 24px;" value="Отменить">
+		<input name="title" type="text" placeholder="Title">
+		<input type="submit" style="width: 100px; height: 24px;" value="Save">
+		<input type="button" onclick="NoNewWidget(); return false;" style="width: 100px; height: 24px;" value="Cancel">
 	</form>
 </div>
 <div id="content">
@@ -17,7 +17,7 @@
 		echo '</div>';
 	}
 	?>
-
+	
 	<br>
-		<a class="button" onclick="NewWidget(); return false;" href="#">Новый виджет</a>
+		<a class="button" onclick="NewWidget(); return false;" href="#">New widget</a>
 </div>

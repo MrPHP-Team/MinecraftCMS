@@ -1,77 +1,62 @@
-<html oncontextmenu="return false;">
-	<head>
-		<style>
-			body {
-				-webkit-user-select: none;
-				-moz-user-select: none;
-				-o-user-select: none;
-				-ms-user-select: none;
-				-mso-user-select: none;
-				-atsc-user-select: none;
-				-khtml-user-select: none;
-				-wap-user-select: none;
-				background-repeat: no-repeat;
-				background-position: center top;
-				background-size: cover;
-				background-color: #a5dce8;
-			}
-			button {
-				width: 25%;
-				border: none;
-				outline: none;
-				background-color: transparent;
-				cursor: pointer;
-				padding: 14px 16px;
-				border-radius: 4px;
-				border: 3px solid white;
-				font-size: 28px;
-				transition: 2s;
-				text-align: center;
-			}
-			button:hover {
-				border: 3px solid gray;
-			}
-			button#a {
-				position: absolute;
-				left: 20%;
-				bottom: 22%;
-			}
-			button#b {
-				position: absolute;
-				right: 20%;
-				bottom: 22%;
-			}
-			p {
-				font-size: 40px;
-				text-shadow: 0px 0px 10px gray;
-				color: rgb(40, 40, 40);
-				transition: 5s;
-				position: absolute;
-				left: 20%;
-				right: 65%;
-				bottom: 30%;
-			}
-			p:hover {
-				text-shadow: 0px 0px 2px black;
-				cursor: pointer;
-				animation-name: test;
-				animation-duration: 5s;
-			}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>404 Page Not Found</title>
+<style type="text/css">
 
-			@Keyframes test {
-				0% {
-					font-style: normal;
-				}
-				100% {
-					font-style: italic;
-				}
-			}
-		</style>
-		<title>Error - 404</title>
-	</head>
-	<body>
-		<p>Запрошенная вами страница <br>не существует или никогда не существовала!</p>
-		<br><br>
-		<button onclick="javascript:history.back()" id="a">Вернуться на последнюю страницу</button><button onclick="javascript:location.reload()" id="b">Перезагрузить</button>
-	</body>
+::selection{ background-color: #E13300; color: white; }
+::moz-selection{ background-color: #E13300; color: white; }
+::webkit-selection{ background-color: #E13300; color: white; }
+
+body {
+	background-color: #fff;
+	margin: 40px;
+	font: 13px/20px normal Helvetica, Arial, sans-serif;
+	color: #4F5155;
+}
+
+a {
+	color: #003399;
+	background-color: transparent;
+	font-weight: normal;
+}
+
+h1 {
+	color: #444;
+	background-color: transparent;
+	border-bottom: 1px solid #D0D0D0;
+	font-size: 19px;
+	font-weight: normal;
+	margin: 0 0 14px 0;
+	padding: 14px 15px 10px 15px;
+}
+
+code {
+	font-family: Consolas, Monaco, Courier New, Courier, monospace;
+	font-size: 12px;
+	background-color: #f9f9f9;
+	border: 1px solid #D0D0D0;
+	color: #002166;
+	display: block;
+	margin: 14px 0 14px 0;
+	padding: 12px 10px 12px 10px;
+}
+
+#container {
+	margin: 10px;
+	border: 1px solid #D0D0D0;
+	-webkit-box-shadow: 0 0 8px #D0D0D0;
+}
+
+p {
+	margin: 12px 15px 12px 15px;
+}
+</style>
+</head>
+<body>
+	<div id="container">
+		<h1><?php echo $heading; ?></h1>
+		<?php echo $message; ?>
+	</div>
+</body>
 </html>
