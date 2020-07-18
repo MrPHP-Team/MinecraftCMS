@@ -1,11 +1,11 @@
         	    <!-- New page box (hidden default)-->
         	<div id="NewPageBox">
         		<form action="" method="get">
-        		<h5>New page  <a onclick="NoNewPage(); return false;" href="#">[X]</a></h5>
+        		<h5>Новая страница  <a onclick="NoNewPage(); return false;" href="#">[X]</a></h5>
         		<hr>
-				<input type="text" name="page" placeholder="Page name">
-				<input type="submit" name="action" value="Create">
-				</form> 
+				<input type="text" name="page" placeholder="Название">
+				<input type="submit" name="action" value="Создать">
+				</form>
 			</div>
 			<!-- Annat -->
         <div id="content">
@@ -18,12 +18,12 @@
 					}
         		?>
         	</select><br>
-        	<input name="action" type="submit" value="Edit" class="button inline">
-        	<input name="action" type="submit" value="Delete" class="button inline">
+        	<input name="action" type="submit" value="Изменить" class="button inline">
+        	<input name="action" type="submit" value="Удалить" class="button inline">
         	<input name="action" type="submit" value="Go" class="button inline">
         </form>
         <div id="desc">
-        	<p>Here you can edit and delete existing pages. To visit the page, press the "Go!" button. Or you can create a ...</p>
+        	<p>Здесь вы можете редактировать и удалять существующие страницы. Чтобы посетить страницу, нажмите «Go!». Или вы можете создать ...</p>
         </div>
-        <a href="#" onclick="NewPage(); return false;" class="button">New page</a>
+        <a href="#" onclick="NewPage(); return false;" class="button">Новая страницаё</a>
 	    </div>

@@ -1,13 +1,14 @@
 <?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 /*
-| -------------------------------------------------------------------------
-| Profiler Sections
-| -------------------------------------------------------------------------
-| This file lets you determine whether or not various sections of Profiler
-| data are displayed when the Profiler is enabled.
-| Please see the user guide for info:
+
+| -------------------------------------------------- -----------------------
+| Разделы профилировщика
+| -------------------------------------------------- -----------------------
+| Этот файл позволяет определить, используются ли различные разделы Profiler.
+| данные отображаются, когда профилировщик включен.
+| Пожалуйста, смотрите руководство пользователя для информации:
 |
-|	http://codeigniter.com/user_guide/general/profiling.html
+| http://codeigniter.com/user_guide/general/profiling.html
 |
 */
 

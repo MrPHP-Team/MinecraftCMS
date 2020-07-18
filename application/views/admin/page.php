@@ -1,6 +1,6 @@
 <div id="content">
     <select>
-    	<option>Start</option>
-    	<option>Join us</option>
+    	<option>Начать</option>
+    	<option>Присоедениться</option>
     </select>
 </div>

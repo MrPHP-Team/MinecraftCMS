@@ -1,13 +1,14 @@
 <?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 /*
-| -------------------------------------------------------------------
-| SMILEYS
-| -------------------------------------------------------------------
-| This file contains an array of smileys for use with the emoticon helper.
-| Individual images can be used to replace multiple simileys.  For example:
-| :-) and :) use the same image replacement.
+
+| -------------------------------------------------- -----------------
+| смайликов
+| -------------------------------------------------- -----------------
+| Этот файл содержит массив смайликов для использования с помощником смайлика.
+| Отдельные изображения можно использовать для замены нескольких симилий. Например:
+| :-) и :) использовать одну и ту же замену изображения.
 |
-| Please see user guide for more info:
+| Пожалуйста, смотрите руководство пользователя для получения дополнительной информации:
 | http://codeigniter.com/user_guide/helpers/smiley_helper.html
 |
 */

@@ -1,14 +1,14 @@
 <div id="NewWidgetBox">
-	<h3>New widget</h3>
+	<h3>Новый виджет</h3>
 	<form action="" method="POST">
 		<textarea name="content" cols="75" rows="5"></textarea>
-		<input name="title" type="text" placeholder="Title">
-		<input type="submit" style="width: 100px; height: 24px;" value="Save">
-		<input type="button" onclick="NoNewWidget(); return false;" style="width: 100px; height: 24px;" value="Cancel">
+		<input name="title" type="text" placeholder="Заглавие">
+		<input type="submit" style="width: 100px; height: 24px;" value="Сохранить">
+		<input type="button" onclick="NoNewWidget(); return false;" style="width: 100px; height: 24px;" value="Отменить">
 	</form>
 </div>
 <div id="content">
-	<h3>Current widgets (<?=$widgets->num_rows()?>)</h3>
+	<h3>Текущие виджеты (<?=$widgets->num_rows()?>)</h3>
 	<?php
 	foreach($widgets->result() as $widget){
 		echo '<div class="widget">';
@@ -17,7 +17,7 @@
 		echo '</div>';
 	}
 	?>
-	
+
 	<br>
-		<a class="button" onclick="NewWidget(); return false;" href="#">New widget</a>
+		<a class="button" onclick="NewWidget(); return false;" href="#">Новый виджет</a>
 </div>

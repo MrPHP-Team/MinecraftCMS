@@ -1,31 +1,32 @@
 <?php
 
 /*
- *---------------------------------------------------------------
- * APPLICATION ENVIRONMENT
- *---------------------------------------------------------------
+* ------------------------------------------------- --------------
+ * ПРИМЕНЕНИЕ ОКРУЖАЮЩЕЙ СРЕДЫ
+ * ------------------------------------------------- --------------
  *
- * You can load different configurations depending on your
- * current environment. Setting the environment also influences
- * things like logging and error reporting.
+ * Вы можете загрузить различные конфигурации в зависимости от вашего
+ * текущая среда. Настройка окружающей среды также влияет
+ * такие вещи, как ведение журнала и отчеты об ошибках.
  *
- * This can be set to anything, but default usage is:
+ * Это может быть установлено на что угодно, но по умолчанию используется:
  *
- *     development
- *     testing
- *     production
+ * разработка
+ * тестирование
+ * производство
  *
- * NOTE: If you change these, also change the error_reporting() code below
+ * ПРИМЕЧАНИЕ: если вы измените их, также измените код error_reporting () ниже
  *
  */
 	define('ENVIRONMENT', 'development');
 /*
- *---------------------------------------------------------------
- * ERROR REPORTING
- *---------------------------------------------------------------
+
+* ------------------------------------------------- --------------
+ * ОТЧЕТ ОБ ОШИБКАХ
+ * ------------------------------------------------- --------------
  *
- * Different environments will require different levels of error reporting.
- * By default development will show errors but testing and live will hide them.
+ * Для разных сред требуются разные уровни сообщений об ошибках.
+ * По умолчанию при разработке будут отображаться ошибки, но тестирование и вживую будут их скрывать.
  */
 
 if (defined('ENVIRONMENT'))
@@ -35,7 +36,7 @@ if (defined('ENVIRONMENT'))
 		case 'development':
 			error_reporting(E_ALL);
 		break;
-	
+
 		case 'testing':
 		case 'production':
 			error_reporting(0);
@@ -47,92 +48,100 @@ if (defined('ENVIRONMENT'))
 }
 
 /*
- *---------------------------------------------------------------
- * SYSTEM FOLDER NAME
- *---------------------------------------------------------------
+
+* ------------------------------------------------- --------------
+ * ИМЯ ПАПКИ СИСТЕМНОЙ
+ * ------------------------------------------------- --------------
  *
- * This variable must contain the name of your "system" folder.
- * Include the path if the folder is not in the same  directory
- * as this file.
+ * Эта переменная должна содержать имя вашей «системной» папки.
+ * Включите путь, если папка не находится в том же каталоге
+ * как этот файл.
  *
  */
 	$system_path = 'system';
 
 /*
- *---------------------------------------------------------------
- * APPLICATION FOLDER NAME
- *---------------------------------------------------------------
+
+* ------------------------------------------------- --------------
+ * НАЗВАНИЕ ПАПКИ
+ * ------------------------------------------------- --------------
  *
- * If you want this front controller to use a different "application"
- * folder then the default one you can set its name here. The folder
- * can also be renamed or relocated anywhere on your server.  If
- * you do, use a full server path. For more info please see the user guide:
+ * Если вы хотите, чтобы этот фронт-контроллер использовал другое «приложение»
+ * папка, то по умолчанию, вы можете установить его имя здесь. Папка
+ * также может быть переименован или перемещен в любое место на вашем сервере. Если
+ * вы делаете, используйте полный путь к серверу. Для получения дополнительной информации см. Руководство пользователя:
  * http://codeigniter.com/user_guide/general/managing_apps.html
  *
- * NO TRAILING SLASH!
+ * НЕТ ТРЕЙЛИНГА!
  *
  */
 	$application_folder = 'application';
 
 /*
- * --------------------------------------------------------------------
- * DEFAULT CONTROLLER
- * --------------------------------------------------------------------
+
+* ------------------------------------------------- -------------------
+ * КОНТРОЛЛЕР ПО УМОЛЧАНИЮ
+ * ------------------------------------------------- -------------------
  *
- * Normally you will set your default controller in the routes.php file.
- * You can, however, force a custom routing by hard-coding a
- * specific controller class/function here.  For most applications, you
- * WILL NOT set your routing here, but it's an option for those
- * special instances where you might want to override the standard
- * routing in a specific front controller that shares a common CI installation.
+ * Обычно вы устанавливаете контроллер по умолчанию в файле rout.php.
+ * Однако вы можете принудительно настроить пользовательскую маршрутизацию, жестко
+ * определенный класс / функция контроллера здесь. Для большинства приложений вы
+ * НЕ БУДЕТ устанавливать вашу маршрутизацию здесь, но это вариант для тех,
+ * особые случаи, когда вы можете переопределить стандарт
+ * маршрутизация в конкретный фронт-контроллер, который использует общую установку CI.
  *
- * IMPORTANT:  If you set the routing here, NO OTHER controller will be
- * callable. In essence, this preference limits your application to ONE
- * specific controller.  Leave the function name blank if you need
- * to call functions dynamically via the URI.
+ * ВАЖНО: если вы установите здесь маршрутизацию, ДРУГОЙ контроллер не будет
+ * вызываемый. По сути, это предпочтение ограничивает ваше приложение одним
+ * конкретный контроллер. Оставьте имя функции пустым, если вам нужно
+ * для динамического вызова функций через URI.
  *
- * Un-comment the $routing array below to use this feature
+ * Снимите комментарий с массива $routing ниже, чтобы использовать эту функцию
  *
  */
-	// The directory name, relative to the "controllers" folder.  Leave blank
-	// if your controller is not in a sub-folder within the "controllers" folder
+// Имя каталога относительно папки «controllers». Оставьте поле пустым
+// если ваш контроллер не находится в подпапке в папке «controllers»
 	// $routing['directory'] = '';
 
-	// The controller class file name.  Example:  Mycontroller
+
+// Имя файла класса контроллера. Пример: Mycontroller
 	// $routing['controller'] = '';
 
-	// The controller function you wish to be called.
+
+// Функция контроллера, которую вы хотите вызвать.
 	// $routing['function']	= '';
 
 
 /*
- * -------------------------------------------------------------------
- *  CUSTOM CONFIG VALUES
- * -------------------------------------------------------------------
+
+* ------------------------------------------------- ------------------
+ * ТАМОЖЕННЫЕ КОНФИГ. ЗНАЧЕНИЯ
+ * ------------------------------------------------- ------------------
  *
- * The $assign_to_config array below will be passed dynamically to the
- * config class when initialized. This allows you to set custom config
- * items or override any default config values found in the config.php file.
- * This can be handy as it permits you to share one application between
- * multiple front controller files, with each file containing different
- * config values.
+ * Приведенный ниже массив $assign_to_config будет динамически передаваться
+ * Конфигурационный класс при инициализации. Это позволяет вам установить пользовательский конфиг
+ * элементы или переопределить любые значения конфигурации по умолчанию, найденные в файле config.php.
+ * Это может быть удобно, так как позволяет вам совместно использовать одно приложение между
+ * несколько файлов фронт-контроллера, каждый из которых содержит разные
+ * значения конфигурации.
  *
- * Un-comment the $assign_to_config array below to use this feature
+ * Снимите комментарий с массива $assign_to_config ниже, чтобы использовать эту функцию
  *
- */
+*/
 	// $assign_to_config['name_of_config_item'] = 'value of config item';
 
 
 
-// --------------------------------------------------------------------
-// END OF USER CONFIGURABLE SETTINGS.  DO NOT EDIT BELOW THIS LINE
-// --------------------------------------------------------------------
 
+// ------------------------------------------------ --------------------
+// КОНЕЦ НАСТРОЙКИ ПОЛЬЗОВАТЕЛЯ. НЕ РЕДАКТИРОВАТЬ НИЖЕ ЭТОЙ ЛИНИИ
+// ------------------------------------------------ --------------------
 /*
- * ---------------------------------------------------------------
- *  Resolve the system path for increased reliability
- * ---------------------------------------------------------------
- */
+
+* ---------------------------------------------------------------
+* Разрешить системный путь для повышения надежности
+* ---------------------------------------------------------------
+
+*/
 
 	// Set the current directory correctly for CLI requests
 	if (defined('STDIN'))
@@ -156,7 +165,7 @@ if (defined('ENVIRONMENT'))
 
 /*
  * -------------------------------------------------------------------
- *  Now that we know the path, set the main path constants
+ * Теперь, когда мы знаем путь, установите основные константы пути
  * -------------------------------------------------------------------
  */
 	// The name of THIS file
@@ -192,13 +201,15 @@ if (defined('ENVIRONMENT'))
 	}
 
 /*
- * --------------------------------------------------------------------
- * LOAD THE BOOTSTRAP FILE
- * --------------------------------------------------------------------
+
+* ------------------------------------------------- -------------------
+ * ЗАГРУЗИТЬ ФАЙЛ BOOTSTRAP
+ * ------------------------------------------------- -------------------
  *
- * And away we go...
+ * И понеслось ...
  *
- */
+*/
+
 require_once BASEPATH.'core/CodeIgniter.php';
 
 /* End of file index.php */

@@ -1,10 +1,10 @@
 <html>
 	<head>
-		<title>Playercraft - install</title>
+		<title>MinecraftCMS - install</title>
 	</head>
 	<body>
-		<p>This will Create 2 tables in your database, Sure you want to continue?</p>
-		<form action="" method="post"><input type="submit" name="install" value="Yes!"></form>
-		
+		<p>Это создаст 2 таблицы в вашей базе данных. Конечно, вы хотите продолжить?</p>
+		<form action="" method="post"><input type="submit" name="install" value="Да!"></form>
+
 	</body>
 </html>

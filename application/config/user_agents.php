@@ -1,12 +1,13 @@
 <?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 /*
-| -------------------------------------------------------------------
-| USER AGENT TYPES
-| -------------------------------------------------------------------
-| This file contains four arrays of user agent data.  It is used by the
-| User Agent Class to help identify browser, platform, robot, and
-| mobile device data.  The array keys are used to identify the device
-| and the array values are used to set the actual name of the item.
+
+| -------------------------------------------------- -----------------
+| ТИПЫ АГЕНТОВ ПОЛЬЗОВАТЕЛЯ
+| -------------------------------------------------- -----------------
+| Этот файл содержит четыре массива данных пользовательского агента. Используется
+| Класс User Agent, помогающий идентифицировать браузер, платформу, робота и
+| данные мобильного устройства. Ключи массива используются для идентификации устройства
+| и значения массива используются для установки фактического имени элемента.
 |
 */
 
@@ -45,8 +46,9 @@ $platforms = array (
 				);
 
 
-// The order of this array should NOT be changed. Many browsers return
-// multiple browser types so we want to identify the sub-type first.
+
+// Порядок этого массива НЕ должен быть изменен. Многие браузеры возвращают
+// несколько типов браузеров, поэтому мы хотим сначала определить подтип.
 $browsers = array(
 					'Flock'				=> 'Flock',
 					'Chrome'			=> 'Chrome',

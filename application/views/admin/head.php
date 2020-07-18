@@ -1,9 +1,9 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html LANG="EN">
 <head>
-    <title>PlayerCraft - Admin</title>
+    <title>MinecraftCMS - Admin</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <link href="<?=base_url()?>css/admin.css" rel="stylesheet"> 
+    <link href="<?=base_url()?>css/admin.css" rel="stylesheet">
 	<link href="<?=base_url()?>css/style.css" rel="stylesheet">
 	<link rel="icon" type="image/png" href="favicon.png">
     <link href='http://fonts.googleapis.com/css?family=Press+Start+2P' rel='stylesheet' type='text/css'>
