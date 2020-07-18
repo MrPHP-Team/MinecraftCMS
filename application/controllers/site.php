@@ -10,7 +10,7 @@ class site extends CI_Controller {
 				$data['site_description'] = $this->config->item('description');
 
 				#Is the site down for maintence?
-				if($this->config->item('maintence_mode') == true){
+				if($this->config->item('maintence_mode')) {
 					show_error('The site is down for maintence');
 				}
 
@@ -21,7 +21,12 @@ class site extends CI_Controller {
                 $page = htmlentities(mysql_real_escape_string($page));
 
                 # - Initialize "page" model.
-                $this->load->model('pageDB');
+		    $this->load->model('pageDB');
+
+				#Is the page a redirect?
+				$redirect = $this->pageDB->is_redirect($page);
+				if($redirect != null){
+					header('Location: '. $redirects);
 
 				#Is the requested page closed?
 				if($this->pageDB->is_closed($page)){
