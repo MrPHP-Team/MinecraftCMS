@@ -21,9 +21,7 @@
         	<input name="action" type="submit" value="Изменить" class="button inline">
         	<input name="action" type="submit" value="Удалить" class="button inline">
         	<input name="action" type="submit" value="Go" class="button inline">
-        </form>
-        <div id="desc">
-        	<p>Здесь вы можете редактировать и удалять существующие страницы. Чтобы посетить страницу, нажмите «Go!». Или вы можете создать ...</p>
-        </div>
+		</form><br />
+        <hr><br />
         <a href="#" onclick="NewPage(); return false;" class="button">Новая страницаё</a>
 	    </div>
