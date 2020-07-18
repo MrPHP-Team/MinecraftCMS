@@ -8,6 +8,13 @@
 			<img src="<?=base_url()?>images/admin/ironviking.png">
 		</div>
 		<div id="loginbox">
+		<?php
+			if(isset($failure)){
+				if($failure != NULL) {
+						echo '<div class="failure">' . $failure . '</div>';
+				}
+				}
+		?>
 			<h4>Войти</h4>
 			<hr>
 			<form action="" method="post">
@@ -17,7 +24,7 @@
 			<input name="password" required type="password"><br>
 			<input type="submit" value="Войти">
 			</form>
-			<p>Use the username and password set in user configuration.</p>
+			<p>Используйте имя пользователя и пароль, установленные в пользовательской конфигурации.</p>
 		</div>
 		<p style="font-weight: bold; font-family: arial; text-align: center;">MinecraftCMS - Alpha</p>
 	</body>
