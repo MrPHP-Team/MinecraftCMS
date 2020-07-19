@@ -1,19 +1,21 @@
 # MinecraftCMS
 
+
 [![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com)
 [![forthebadge](https://forthebadge.com/images/badges/uses-html.svg)](https://forthebadge.com)
 [![forthebadge](https://forthebadge.com/images/badges/built-by-hipsters.svg)](https://forthebadge.com)
 
+
 ## English:
+
 
 ### Foreword:
 
-MinecraftCMS is a brand new CMS for Minecraft project sites.
-This CMS is regularly updated, official modules are written for it, bugs that you found or we are fixed are fixed.
-Also, we are ready to help with installation on your project. To do this, you can write to us by mail.
 
-Also, in each file there are detailed comments to the code, so if you want to change the site,
-it will not be difficult and time-consuming, in search of the desired file or line,
+MinecraftCMS is a content management system focused on minecraft.
+It allows administrators to create and manage a website, and also runs on the CodeIgniter platform for stability, speed, and security.
+There are detailed comments on the code, so if you want to change the site,
+it does not require much work and time,
 as there is a comment for each line of code.
 
 You can take part in the development.
@@ -26,10 +28,9 @@ Enjoy your use!
 
 ### Предисловие:
 
-MinecraftCMS - это совершенно новая CMS для Minecraft сайтов для проектов.
-Эта CMS регулярно обновляется, для неё пишутся оффициальные модули, фиксятся баги которые вы нашли или мы.
-Так-же, мы готовы помочь с установкой на ваш проект. Для этого вы можете написать нам на почту.
 
+MinecraftCMS - это система управления контентом, ориентированная на майнкрафт.
+Он позволяет администраторам серверов создавать и управлять веб-сайтом в считанные минуты и с максимальной гибкостью, и работает на платформе CodeIgniter для обеспечения стабильности, скорости и безопасности.
 Так-же, в каждом файле есть подробные комментарии к коду, так-что если вы захотите изменить сайт,
 это не составит большого труда и времени, в поисках нужного файла или строки,
 так-как к каждой строке кода есть комментарий.
