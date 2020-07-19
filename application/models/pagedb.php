@@ -134,7 +134,7 @@ class PageDB extends CI_Model {
 		$content = mysql_real_escape_string($content);
 		$order = mysql_real_escape_string($order);
 
-		if(!is_numeric($order)){
+		if(!is_numeric($order)) {
 			$order = 5;
 		}
 		$this->db->query("UPDATE `widgets` SET `title` = '$title',`content` = '$content',`ord` = '$order' WHERE `id` =$id;");

@@ -48,7 +48,9 @@ class Admin extends CI_Controller {
 		$this->load->model('pageDB');
 
 		#Does the page even exists?
-		$this->pageDB->page_exists($page);
+		if(!$this->pageDB->page_exists($page)){
+			show_404();
+		}
 		#Anything happend?
 		if(isset($_POST['action'])) {
 			$update = $this->pageDB->updatePage($page, $_POST['name'], $_POST['content'], $_POST['order'], $_POST['status']);

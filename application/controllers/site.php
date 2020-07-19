@@ -34,8 +34,9 @@ class site extends CI_Controller {
 				}
 
 				#Does the page even exists?
-				$this->pageDB->page_exists($page);
-
+				if(!$this->pageDB->page_exists($page)){
+					show_404();
+				}
                 # - Load page data
                  $data['menuItems'] = $this->pageDB->getMenuItems();
                  $data['pageContent'] = $this->pageDB->getPageContent($page);
@@ -49,27 +50,27 @@ class site extends CI_Controller {
 				$this->load->view('end');
 	}
 
-	public function login()
-	{
-		#Declare variable
-		$data['failure'] = "";
-		#Load the config
-		$this->config->load('user');
-		$username = $this->config->item('user');
-		$password = $this->config->item('password');
-		#Is the user trying to login?
-		if(isset($_POST['password']) && isset($_POST['username'])){
-			if($_POST['username'] == $username && $_POST['password'] == $password){
-				$_SESSION['admin'] = true;
-				header("Место: " .base_url() . 'admin');
-			} else{
-			  #Login failed
-			  $data['failure'] = "Login failed.";
+	public function login() {
+			#Declare variable
+			$data['failure'] = "";
+			#Load the config
+			$this->config->load('user');
+			$username = $this->config->item('user');
+			$password = $this->config->item('password');
+			#Is the user trying to login?
+			if(isset($_POST['password']) && isset($_POST['username'])){
+				if($_POST['username'] == $username && $_POST['password'] == $password){
+					$_SESSION['admin'] = true;
+					header("Location: " .base_url() . 'admin');
+				}else{
+					#Login failed
+					$data['failure'] = "Ошибка входа.";
+				}
 			}
+			if($password == ''){
+					show_error('Пустой пароль не допускается. Вы забыли установить его?');
+				}
+			$this->load->view('login/login', $data);
 		}
-		if($password == ''){
-				show_error('Пустой пароль не принемается. Вы уверены что не хотели ввести пароль?');
-			}
-	    $this->load->view('login/login', $data);
 	}
 }
