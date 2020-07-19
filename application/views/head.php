@@ -14,11 +14,11 @@
 
 </head>
 <!-- Body -->
-<body onload="fix();">
+<body">
 
 <div id="page">
 	<div id="logo">
 		<a href="<?=$url?>"><img src="<?=$url?>images/logo.png" alt="Logo"></a>
 	</div>
-	
+
 <div id="container">
