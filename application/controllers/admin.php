@@ -53,7 +53,7 @@ class Admin extends CI_Controller {
 		if(isset($_POST['action'])) {
 			$update = $this->pageDB->updatePage($page, $_POST['name'], $_POST['content'], $_POST['order'], $_POST['status']);
 			if(!$update){
-				$data['notice'] = "Страница не сохранена!";
+				$data['notice'] = "Страница не обновилась. (Имя уже существует?)";
 			}else{
 				$data['notice'] = 'Страница обновлена! <a target="__blank" href="'. base_url() . $page . '">[view]</a>';
 			}

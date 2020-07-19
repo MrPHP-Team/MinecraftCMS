@@ -19,6 +19,7 @@ class PageDB extends CI_Model {
       }
 
 	function is_closed($page) {
+		$page = mysql_real_escape_string($page);
 		$page = str_replace('_', ' ', $page);
 		$data = $this->db->query("SELECT status FROM pages WHERE name='$page'");
 		if($data->row('status') == 3) {
@@ -27,9 +28,10 @@ class PageDB extends CI_Model {
 	}
 
     function getPageContent($page) {
-	      $page = str_replace('_', ' ', $page);
-            $data = $this->db->query("SELECT content FROM pages WHERE name='$page'");
-            return $data->row('content');
+		$page = mysql_real_escape_string($page);
+		$page = str_replace('_', ' ', $page);
+		$data = $this->db->query("SELECT content FROM pages WHERE name='$page'");
+      	return $data->row('content');
     }
 
     function getWidgets() {
@@ -40,13 +42,15 @@ class PageDB extends CI_Model {
     }
 
 	function getPageData($page) {
+		$page = mysql_real_escape_string($page);
 		$page = str_replace('_',' ', $page);
 		$data = $this->db->query("SELECT * FROM pages WHERE name='$page'");
 		return $data;
 	}
 
 	function deletePage($page) {
-		if($page == 'start') {
+		$page = mysql_real_escape_string($page);
+		if($page == 'start'){
 			show_error('<p>Вы не можете удалить стартовую страницу!</p><br /><a href="admin"><input type="buton" value="Назад"></a>');
 		}
 		$page = mysql_real_escape_string($page);
@@ -60,20 +64,24 @@ class PageDB extends CI_Model {
 	}
 
 	function page_exists($page) {
+		$page = mysql_real_escape_string($page);
 		$page = str_replace('_',' ',$page);
 		$query = $this->db->query("SELECT id FROM pages WHERE name='$page'");
-		if($query->num_rows() == 0) {
-			show_404();
+		if($query->num_rows() == 0){
+			return false;
+		}else{
+			return true;
 		}
 	}
 
 	function updatePage($page, $name, $content, $order, $status) {
-
 		$page = mysql_real_escape_string(str_replace('_', ' ', $page));
+		$page = mysql_real_escape_string($page);
 		$content = mysql_real_escape_string($content);
 		$order = mysql_real_escape_string($order);
 		$status = mysql_real_escape_string($status);
-		switch($status) {
+		switch($status)
+		{
 			case 'open':
 				$status = 1;
 				break;
@@ -86,12 +94,19 @@ class PageDB extends CI_Model {
 			default:
 				$status = 1;
 		}
-		if(!is_numeric($order)) {
+
+		if($page != $name){
+			if($this->page_exists($name)){
+				return false;
+			}
+		}
+
+		if(!is_numeric($order)){
 			$order = 10;
 		}
 		$this->db->query("UPDATE pages SET `name` = '$name', `content` = '$content', `ord` = '$order', `status` = '$status' WHERE name = '$page';");
 		return true;
-		if($page != $name) {
+		if($page != $name){
 			header('location: '. base_url() .'admin');
 		}
 	}
@@ -103,16 +118,23 @@ class PageDB extends CI_Model {
 	}
 
 	function deleteWidget($id) {
+		$id = mysql_real_escape_string($id);
 		$this->db->query("DELETE FROM widgets WHERE id='$id'");
 	}
 
 	function GetWidget($id) {
+		$id = mysql_real_escape_string($id);
 		$data = $this->db->query("SELECT * FROM widgets WHERE id='$id'");
 		return $data;
 	}
 
 	function updateWidget($id, $title, $content, $order) {
-		if(!is_numeric($order)) {
+		$id = mysql_real_escape_string($id);
+		$title = mysql_real_escape_string($title);
+		$content = mysql_real_escape_string($content);
+		$order = mysql_real_escape_string($order);
+
+		if(!is_numeric($order)){
 			$order = 5;
 		}
 		$this->db->query("UPDATE `widgets` SET `title` = '$title',`content` = '$content',`ord` = '$order' WHERE `id` =$id;");
