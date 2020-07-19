@@ -1,14 +1,12 @@
 <?php
-foreach($pageData->result() as $page)
-{
+foreach($pageData->result() as $page) {
 	$pageContent['source'] = $page->content;
 	$pageContent['name']   = $page->name;
 	$pageContent['order']  = $page->ord;
 	$pageContent['status'] = $page->status;
 }
 
-switch($pageContent['status'])
-{
+switch($pageContent['status']) {
 	case 1:
 	     $status = '<option name="open" selected>открытый</option>\n<option name="скрытый">hidden</option>\n<option name="closed">закрытый</option>';
 		break;
@@ -25,6 +23,13 @@ switch($pageContent['status'])
 ?>
 
 <div id="content">
+	<?php
+		if(isset($notice)) {
+			echo '<div class="editor-notice">';
+			echo '<p style="color: white;">' . $notice . '</p>';
+			echo '</div>';
+		}
+	?>
 	<form method="post" action"">
 	<textarea style="resize: none; height: 257px; width: 415px;" name="content" wrap="off" rows="15" cols="50"><?=$pageContent['source']?></textarea>
 		<div id="PageProperties">
@@ -46,7 +51,7 @@ switch($pageContent['status'])
 		</select>
 	</div>
 	<div class="mtop">
-		<input type="submit" class="button" name="action" value="Save">
+		<input type="submit" class="button" name="action" value="Сохранить">
 		<a href="<?=base_url()?>admin" class="button">Отменить</a>
 		</form>
 	</div>
