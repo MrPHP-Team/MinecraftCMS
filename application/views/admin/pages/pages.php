@@ -1,7 +1,7 @@
         	    <!-- New page box (hidden default)-->
-        	<div id="NewPageBox">
+        	<div id="NewBox">
         		<form action="" method="get">
-        		<h5>Новая страница  <a onclick="NoNewPage(); return false;" href="#">[X]</a></h5>
+        		<h5>Новая страница  <a onclick="NoNewBox(); return false;" href="#">[X]</a></h5>
         		<hr>
 				<input type="text" name="page" placeholder="Название">
 				<input type="submit" name="action" value="Создать">
@@ -23,5 +23,5 @@
         	<input name="action" type="submit" value="Go" class="button inline">
 		</form><br />
         <hr><br />
-        <a href="#" onclick="NewPage(); return false;" class="button">Новая страницаё</a>
+        <a href="#" onclick="NewBox(); return false;" class="button">Новая страницаё</a>
 	    </div>

@@ -1,10 +1,10 @@
-<div id="NewWidgetBox">
+<div id="NewBox">
 	<h3>Новый виджет</h3>
 	<form action="" method="POST">
 		<textarea name="content" cols="75" rows="5"></textarea>
 		<input name="title" type="text" placeholder="Заглавие">
 		<input type="submit" style="width: 100px; height: 24px;" value="Сохранить">
-		<input type="button" onclick="NoNewWidget(); return false;" style="width: 100px; height: 24px;" value="Отменить">
+		<input type="button" onclick="NoNewBox(); return false;" style="width: 100px; height: 24px;" value="Отменить">
 	</form>
 </div>
 <div id="content">
@@ -19,5 +19,5 @@
 	?>
 
 	<br>
-		<a class="button" onclick="NewWidget(); return false;" href="#">Новый виджет</a>
+		<a class="button" onclick="NewBox(); return false;" href="#">Новый виджет</a>
 </div>
