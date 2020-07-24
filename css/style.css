@@ -119,6 +119,11 @@ p{
 	color: #282828;
 }
 
+#content h1, h2, h3, h4{
+	font-weight: bold;
+}
+
+
 /** Sidebar (#aside, .widget) **/
 #aside
 {
@@ -127,6 +132,19 @@ p{
 	padding-bottom: 20px;
 	width: 260px;
 
+}
+
+
+/* Other stuff */
+
+.qoute
+{
+	border: 1px solid gray;
+	border-radius: 2px;
+	background-color: #F0E68C;
+	width: 450px;
+	font-style: italic;
+	padding: 5px;
 }
 
 .widget
