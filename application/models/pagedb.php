@@ -124,7 +124,6 @@ class PageDB extends CI_Model {
 		}
 
 		return true;
-
 	}
 
 	function addWidget($title, $content) {
