@@ -59,6 +59,11 @@ class PageDB extends CI_Model {
 	}
 
 	function addPage($page) {
+
+		if($this->page_exists($page)) {
+			return false;
+		}
+
 		$page = htmlentities(mysql_real_escape_string($page));
 		$this->db->query("INSERT INTO pages (`id`, `name`, `content`, `ord`, `status`) VALUES (NULL, '$page', '<p>Page content</p>', '10', '1');");
 	}
