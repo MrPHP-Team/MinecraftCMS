@@ -7,8 +7,13 @@
 		<input type="button" onclick="NoNewBox(); return false;" style="width: 100px; height: 24px;" value="Отменить">
 	</form>
 </div>
-<div id="content">
+
+<section>
+	<h2>Виджеты</h2>
+	<hr>
+
 	<h3>Текущие виджеты (<?=$widgets->num_rows()?>)</h3>
+
 	<?php
 	foreach($widgets->result() as $widget){
 		echo '<div class="widget">';
@@ -19,5 +24,5 @@
 	?>
 
 	<br>
-		<a class="button" onclick="NewBox(); return false;" href="#">Новый виджет</a>
-</div>
+	<a onclick="NewBox(); return false;" href="#"><button>Новый Виджет</button></a>
+</section>

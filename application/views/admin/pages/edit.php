@@ -22,7 +22,9 @@ switch($pageContent['status']) {
 
 ?>
 
-<div id="content">
+<section>
+	<h2>Изменение страницы</h2>
+	
 	<?php
 		if(isset($notice)) {
 			echo '<div class="editor-notice">';
@@ -33,26 +35,27 @@ switch($pageContent['status']) {
 	<form method="post" action"">
 	<textarea style="resize: none; height: 257px; width: 415px;" name="content" wrap="off" rows="15" cols="50"><?=$pageContent['source']?></textarea>
 		<div id="PageProperties">
-		<h4>Настройки</h4>
-		<hr><br />
-		<div class="prop">
-		<p>Имя</p>
-		<input style="width: 150px;" name="name" required type="text" value="<?=$pageContent['name']?>">
-		</div>
-		<div class="prop">
-		<p>Порядок</p>
-		<input style="width: 150px;" name="order" required type="number" value="<?=$pageContent['order']?>">
-		</div>
-		<div class="prop">
-		<p>Статус</p>
-		</div>
-		<select style="width: 150px;" name="status" style="width: 155px;">
-			<?=$status?>
-		</select>
+			<h4>Настройки</h4>
+			<hr><br />
+
+			<div class="prop">
+				<p>Имя</p>
+				<input style="width: 150px;" name="name" required type="text" value="<?=$pageContent['name']?>">
+			</div>
+			<div class="prop">
+				<p>Порядок</p>
+				<input style="width: 150px;" name="order" required type="number" value="<?=$pageContent['order']?>">
+			</div>
+			<div class="prop">
+				<p>Статус</p>
+				</div>
+			<select style="width: 150px;" name="status" style="width: 155px;">
+				<?=$status?>
+			</select>
 	</div>
 	<div class="mtop">
 		<input type="submit" class="button" name="action" value="Сохранить">
-		<a href="<?=base_url()?>admin" class="button">Отменить</a>
+		<a href="<?=base_url()?>admin"><input type="button" value="Отменить"></a>
 		</form>
 	</div>
-</div>
+</section>

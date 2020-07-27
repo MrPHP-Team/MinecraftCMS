@@ -37,9 +37,7 @@ class Admin extends CI_Controller {
 
 		#Initilize views
 		$this->load->view('admin/head');
-		$this->load->view('admin/navigation');
 		$this->load->view('admin/pages/pages', $data);
-		$this->load->view('admin/sidebar');
 		$this->load->view('admin/end');
 	}
 
@@ -66,9 +64,7 @@ class Admin extends CI_Controller {
 
 		#Initilize views
 		$this->load->view('admin/head');
-		$this->load->view('admin/navigation');
 		$this->load->view('admin/pages/edit', $data);
-		$this->load->view('admin/sidebar');
 		$this->load->view('admin/end');
 	}
 
@@ -92,9 +88,7 @@ class Admin extends CI_Controller {
 
 		#Initilize widgets
 		$this->load->view('admin/head');
-		$this->load->view('admin/navigation');
 		$this->load->view('admin/pages/widgets', $data);
-		$this->load->view('admin/sidebar');
 		$this->load->view('admin/end');
 	}
 
@@ -114,9 +108,7 @@ class Admin extends CI_Controller {
 
 		#Initilize widgets
 		$this->load->view('admin/head');
-		$this->load->view('admin/navigation');
 		$this->load->view('admin/pages/misc', $data);
-		$this->load->view('admin/sidebar');
 		$this->load->view('admin/end');
 	}
 
@@ -137,9 +129,7 @@ class Admin extends CI_Controller {
 
 		#Initlize views
 		$this->load->view('admin/head');
-		$this->load->view('admin/navigation');
 		$this->load->view('admin/pages/EditWidget', $data);
-		$this->load->view('admin/sidebar');
 		$this->load->view('admin/end');
 	}
 

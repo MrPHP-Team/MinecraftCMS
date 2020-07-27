@@ -87,12 +87,8 @@ class PageDB extends CI_Model {
 		$content = 	 mysql_real_escape_string($content);
 		$order 	 = 	 mysql_real_escape_string($order);
 		$status  = 	 mysql_real_escape_string($status);
-		if($page == 'start' or 'Start') {
-			return false;
-		}
 
-		switch($status)
-		{
+		switch($status) {
 			case 'open':
 				$status = 1;
 				break;
@@ -106,8 +102,8 @@ class PageDB extends CI_Model {
 				$status = 1;
 		}
 
-		if($page != $name){
-			if($this->page_exists($name)){
+		if($page != $name) {
+			if($this->page_exists($name)) {
 				return false;
 			}
 		}
