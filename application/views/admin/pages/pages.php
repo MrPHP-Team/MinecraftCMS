@@ -3,7 +3,7 @@
         		<form action="" method="get">
         		<h5>Новая страница  <a onclick="NoNewBox(); return false;" href="#">[X]</a></h5>
         		<hr>
-				<input type="text" name="page" placeholder="Название">
+			  <input type="text" required name="page" placeholder="Название страницы"><br>
 				<input type="submit" name="action" value="Создать">
 				</form>
 			</div>
